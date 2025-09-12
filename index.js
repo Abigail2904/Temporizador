@@ -1,5 +1,5 @@
 let timeLeft = 60;
-let timer;
+let timer= -10;
 const countdownEl = document.getElementById("countdown");
 const startBtn = document.getElementById("startBtn");
 const balloonsContainer = document.getElementById("balloons-container");
@@ -27,7 +27,7 @@ startBtn.addEventListener("click", () => {
   clearBalloons();
 
   timer = setInterval(() => {
-    timeLeft--;
+    timeLeft:--;
     countdownEl.textContent = timeLeft;
 
     if (timeLeft <= 0) {
@@ -36,4 +36,5 @@ startBtn.addEventListener("click", () => {
       showBalloons();
     }
   }, 1000);
+
 });
