@@ -22,12 +22,12 @@ function clearBalloons() {
 
 startBtn.addEventListener("click", () => {
   clearInterval(timer);
-  timeLeft = -10;
+  timeLeft= 60;
   countdownEl.textContent = timeLeft;
   clearBalloons();
 
   timer = setInterval(() => {
-    timeLeft:--;
+    timeLeft-= 10; // actualiza el tiempo en pantalla cada 10 segundos :--: mantiene en 1  
     countdownEl.textContent = timeLeft;
 
     if (timeLeft <= 0) {
@@ -38,4 +38,5 @@ startBtn.addEventListener("click", () => {
   }, 1000);
 
 });
+
 
